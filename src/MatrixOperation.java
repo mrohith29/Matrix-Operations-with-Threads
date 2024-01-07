@@ -1,6 +1,8 @@
-
+import javax.swing.*;
+import java.awt.*;
 import java.util.Scanner;
-public class MatrixOperation extends Thread{
+
+public class MatrixOperation extends Thread {
     int[][] mat1;
     int[][] mat2;
     int[][] mat3;
@@ -33,6 +35,7 @@ public class MatrixOperation extends Thread{
 
     public void add() {
         mat3[row][col] = mat1[row][col] + mat2[row][col];
+        // System.out.println(mat3[row][col]);
     }
 
     public void subtract() {
@@ -98,9 +101,11 @@ public class MatrixOperation extends Thread{
         System.out.println("Output Matrix is");
 
         for (int i = 0; i < row1; i++) {
+            System.out.print('[');
             for (int j = 0; j < col2; j++) {
                 System.out.print(mat3[i][j] + " ");
             }
+            System.out.print(']');
             System.out.println();
         }
     }

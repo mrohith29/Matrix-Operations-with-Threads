@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bcc9ced-7fad-40c9-b0b1-a744b0f28cc2" name="Changes" comment="add java file">
+    <list default="true" id="1bcc9ced-7fad-40c9-b0b1-a744b0f28cc2" name="Changes" comment="add addition and subtraction operations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/matrixMultiplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MatrixOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MatrixOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MatrixOperation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,11 +89,20 @@
       <option name="project" value="LOCAL" />
       <updated>1704388138427</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add addition and subtraction operations">
+      <option name="closed" value="true" />
+      <created>1704626248111</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704626248111</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add java file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add java file" />
+    <MESSAGE value="add addition and subtraction operations" />
+    <option name="LAST_COMMIT_MESSAGE" value="add addition and subtraction operations" />
   </component>
 </project>
