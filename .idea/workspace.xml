@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bcc9ced-7fad-40c9-b0b1-a744b0f28cc2" name="Changes" comment="add addition and subtraction operations">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MatrixOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MatrixOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MatrixOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,16 +35,32 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "Application.MatrixOperation.executor": "Run",
     "Application.matrixMultiplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "20",
     "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "C:/Users/mariy/OneDrive/Desktop/github repository/Matrix-Product-with-Threads/src/Main.java"
+    "onboarding.tips.debug.path": "C:/Users/mariy/OneDrive/Desktop/github repository/Matrix-Product-with-Threads/testing/src/Main.java"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.MatrixOperation">
+  <component name="RunManager" selected="Application.MatrixOperation (1)">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Matrix-Product-with-Threads" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MatrixOperation (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MatrixOperation" />
+      <module name="original" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MatrixOperation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MatrixOperation" />
       <module name="Matrix-Product-with-Threads" />
@@ -60,6 +77,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MatrixOperation (1)" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.MatrixOperation" />
         <item itemvalue="Application.matrixMultiplication" />
       </list>
@@ -104,5 +123,16 @@
     <MESSAGE value="add java file" />
     <MESSAGE value="add addition and subtraction operations" />
     <option name="LAST_COMMIT_MESSAGE" value="add addition and subtraction operations" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/testing/src/Main.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

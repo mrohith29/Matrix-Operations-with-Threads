@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Matrix-Product-with-Threads.iml" filepath="$PROJECT_DIR$/Matrix-Product-with-Threads.iml" />
+      <module fileurl="file://$PROJECT_DIR$/original/original.iml" filepath="$PROJECT_DIR$/original/original.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testing/testing.iml" filepath="$PROJECT_DIR$/testing/testing.iml" />
     </modules>
   </component>
 </project>
