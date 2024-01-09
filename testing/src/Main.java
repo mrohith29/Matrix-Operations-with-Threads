@@ -9,41 +9,79 @@ public class Main extends Thread {
     int[][] mat3;
     int row, col, choice;
 
+    // public static int[][] getMatrixInput(int rows, int cols, String matrixName) {
+    //     JFrame inputFrame = new JFrame(matrixName);
+    //     inputFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    //     inputFrame.setSize(3000, 2000);
+    
+    //     JPanel inputPanel = new JPanel(new GridLayout(rows, cols));
+    //     inputFrame.add(inputPanel, BorderLayout.NORTH);
+    
+    //     JTextField[][] fields = new JTextField[rows][cols];
+    //     for (int i = 0; i < rows; i++) {
+    //         for (int j = 0; j < cols; j++) {
+    //             fields[i][j] = new JTextField();
+    //             inputPanel.add(fields[i][j]);
+    //         }
+    //     }
+    
+    //     JButton saveButton = new JButton("Save input");
+    //     inputPanel.add(saveButton);
+    
+    //     int[][] matrix = new int[rows][cols];
+    //     saveButton.addActionListener(new ActionListener() {
+    //         public void actionPerformed(ActionEvent e) {
+    //             for (int i = 0; i < rows; i++) {
+    //                 for (int j = 0; j < cols; j++) {
+    //                     matrix[i][j] = Integer.parseInt(fields[i][j].getText());
+    //                 }
+    //             }
+    //             inputFrame.dispose();
+    //         }
+    //     });
+    
+    //     inputFrame.setVisible(true);
+    
+    //     return matrix;
+    // }
+
+
     public static int[][] getMatrixInput(int rows, int cols, String matrixName) {
-        JFrame inputFrame = new JFrame(matrixName);
-        inputFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        inputFrame.setSize(300, 200);
-    
-        JPanel inputPanel = new JPanel(new GridLayout(rows, cols));
-        inputFrame.add(inputPanel, BorderLayout.NORTH);
-    
-        JTextField[][] fields = new JTextField[rows][cols];
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                fields[i][j] = new JTextField();
-                inputPanel.add(fields[i][j]);
-            }
+    JDialog inputDialog = new JDialog();
+    inputDialog.setTitle(matrixName);
+    inputDialog.setModal(true);
+    inputDialog.setSize(300, 200);
+
+    JPanel inputPanel = new JPanel(new GridLayout(rows, cols));
+    inputDialog.add(inputPanel, BorderLayout.NORTH);
+
+    JTextField[][] fields = new JTextField[rows][cols];
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            fields[i][j] = new JTextField();
+            inputPanel.add(fields[i][j]);
         }
-    
-        JButton saveButton = new JButton("Save input");
-        inputPanel.add(saveButton);
-    
-        int[][] matrix = new int[rows][cols];
-        saveButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                for (int i = 0; i < rows; i++) {
-                    for (int j = 0; j < cols; j++) {
-                        matrix[i][j] = Integer.parseInt(fields[i][j].getText());
-                    }
-                }
-                inputFrame.dispose();
-            }
-        });
-    
-        inputFrame.setVisible(true);
-    
-        return matrix;
     }
+
+    JButton saveButton = new JButton("Save input");
+    inputPanel.add(saveButton);
+
+    int[][] matrix = new int[rows][cols];
+    saveButton.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+            for (int i = 0; i < rows; i++) {
+                for (int j = 0; j < cols; j++) {
+                    matrix[i][j] = Integer.parseInt(fields[i][j].getText());
+                }
+            }
+            inputDialog.dispose();
+        }
+    });
+
+    inputDialog.setVisible(true);
+
+    return matrix;
+}
 
     Main(int[][] A, int[][] B, int[][] C, int i, int j, int choice) {
         this.mat1 = A;
@@ -82,7 +120,7 @@ public class Main extends Thread {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(300, 200);
 
-        JPanel inputPanel = new JPanel(new GridLayout(4, 2));
+        JPanel inputPanel = new JPanel(new GridLayout());
         frame.add(inputPanel, BorderLayout.NORTH);
 
         JLabel label1 = new JLabel("Matrix 1 rows:");
@@ -128,7 +166,6 @@ public class Main extends Thread {
 
                 Main[][] threads = new Main[row1][col2];
 
-                // Remove the duplicate declaration of mat1
                 mat1 = getMatrixInput(row1, col1, "Matrix 1");
 
                 mat2 = getMatrixInput(row2, col2, "Matrix 2");
