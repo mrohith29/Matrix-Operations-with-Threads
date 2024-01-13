@@ -28,6 +28,7 @@ public class Main extends Thread {
 
         JButton saveButton = new JButton("Save input");
         inputPanel.add(saveButton);
+        saveButton.setBackground(Color.GREEN);
 
         int[][] matrix = new int[rows][cols];
         saveButton.addActionListener(new ActionListener() {
@@ -80,41 +81,52 @@ public class Main extends Thread {
 
     public static void main(String[] args) throws InterruptedException {
         JFrame frame = new JFrame("Matrix Operation");
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(300, 200);
+        // frame.setSize(300, 200);
 
-        JPanel inputPanel = new JPanel(new GridLayout());
+        JPanel inputPanel = new JPanel(new GridLayout(0, 1));
+        inputPanel.setBackground(Color.black);
         frame.add(inputPanel, BorderLayout.NORTH);
 
         JLabel label1 = new JLabel("Matrix 1 rows:");
         JTextField textField1 = new JTextField();
         inputPanel.add(label1);
         inputPanel.add(textField1);
+        label1.setForeground(Color.WHITE);
+        textField1.setBackground(Color.gray);
 
         JLabel label2 = new JLabel("Matrix 1 columns:");
         JTextField textField2 = new JTextField();
         inputPanel.add(label2);
         inputPanel.add(textField2);
+        label2.setForeground(Color.WHITE);
+        textField2.setBackground(Color.gray);
 
         JLabel label3 = new JLabel("Matrix 2 rows:");
         JTextField textField3 = new JTextField();
         inputPanel.add(label3);
         inputPanel.add(textField3);
+        label3.setForeground(Color.WHITE);
+        textField3.setBackground(Color.gray);
 
         JLabel label4 = new JLabel("Matrix 2 columns:");
         JTextField textField4 = new JTextField();
         inputPanel.add(label4);
         inputPanel.add(textField4);
-
-        JButton saveButton = new JButton("Save input");
-        inputPanel.add(saveButton);
+        label4.setForeground(Color.WHITE);
+        textField4.setBackground(Color.gray);
 
         String[] operations = { "Multiply", "Add", "Subtract" };
         JComboBox operationsBox = new JComboBox(operations);
         inputPanel.add(operationsBox);
 
+        JButton saveButton = new JButton("Save input");
+        inputPanel.add(saveButton);
+        saveButton.setBackground(Color.GREEN);
+
         JTextArea outputArea = new JTextArea();
-        frame.add(new JScrollPane(outputArea), BorderLayout.SOUTH);
+        frame.add(new JScrollPane(outputArea), BorderLayout.CENTER);
 
         saveButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -178,6 +190,11 @@ public class Main extends Thread {
                 outputArea.setText(output.toString());
             }
         });
+
+        JLabel outputTag = new JLabel("Output :", SwingConstants.LEFT);
+        inputPanel.add(outputTag);
+        outputTag.setForeground(Color.RED);
+        outputTag.setBackground(Color.YELLOW);
 
         frame.setVisible(true);
     }
