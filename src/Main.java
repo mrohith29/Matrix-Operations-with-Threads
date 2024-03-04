@@ -85,7 +85,7 @@ public class Main extends Thread {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // frame.setSize(300, 200);
 
-        JPanel inputPanel = new JPanel(new GridLayout(0, 1));
+        JPanel inputPanel = new JPanel(new GridLayout(2, 2));
         inputPanel.setBackground(Color.black);
         frame.add(inputPanel, BorderLayout.NORTH);
 
